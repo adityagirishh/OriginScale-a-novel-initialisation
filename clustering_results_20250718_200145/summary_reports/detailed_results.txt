@@ -1,0 +1,158 @@
+
+# Clustering Algorithm Comparison Summary Report
+
+## Experiment Overview
+- **Date**: 2025-07-18 20:02:14
+- **Total Algorithms**: 14
+- **Total Datasets**: 7
+- **Total Experiments**: 98
+- **Successful Experiments**: 90
+
+## Algorithm Success Rates
+- **OriginScale**: 7/7 (100.00%)
+- **K-Means (Random)**: 7/7 (100.00%)
+- **K-Means++**: 7/7 (100.00%)
+- **Mini-Batch K-Means**: 7/7 (100.00%)
+- **DBSCAN**: 7/7 (100.00%)
+- **Agglomerative**: 7/7 (100.00%)
+- **Affinity Propagation**: 7/7 (100.00%)
+- **GMM**: 7/7 (100.00%)
+- **Mean Shift**: 7/7 (100.00%)
+- **OPTICS**: 7/7 (100.00%)
+- **BIRCH**: 7/7 (100.00%)
+- **Spectral Clustering**: 7/7 (100.00%)
+- **K-Medoids**: 7/7 (100.00%)
+- **HDBSCAN**: 7/7 (100.00%)
+
+## Best Performers
+- **Best Silhouette Score**: OPTICS on anisotropic (Score: 0.9030)
+- **Fastest Algorithm**: OriginScale on wine (0.0003s)
+
+## Dataset-wise Metrics, Memory, and Execution Time
+
+### Dataset: moons
+| Algorithm | Silhouette Score | Calinski Harabasz Score | Davies Bouldin Score | Execution Time | Memory Usage |
+|---|---|---|---|---|---|
+| OriginScale | 0.4820 | 1430.5970 | 0.7902 | 0.0011 | 0.0000 |
+| K-Means (Random) | 0.4820 | 1430.5970 | 0.7902 | 0.0655 | 0.7031 |
+| K-Means++ | 0.4820 | 1430.5970 | 0.7902 | 0.0203 | 0.0625 |
+| Mini-Batch K-Means | 0.4818 | 1427.5678 | 0.7899 | 0.0354 | 0.1719 |
+| Agglomerative | 0.4394 | 1068.5132 | 0.7975 | 0.0072 | 6.8594 |
+| Affinity Propagation | 0.4072 | 2869.0904 | 0.7549 | 0.4287 | 40.1719 |
+| GMM | 0.4640 | 1248.3959 | 0.8304 | 0.0524 | 0.2031 |
+| Mean Shift | 0.4691 | 1284.2413 | 0.8207 | 2.0361 | -104.9375 |
+| OPTICS | 0.7095 | 1988.7230 | 0.3963 | 1.3631 | 1.6562 |
+| BIRCH | 0.4448 | 1154.0539 | 0.7855 | 0.0068 | 0.0000 |
+| Spectral Clustering | 0.4373 | 1080.5500 | 0.8285 | 0.4292 | 1.7969 |
+| K-Medoids | 0.4790 | 1388.1218 | 0.7857 | 0.0601 | 6.1250 |
+| HDBSCAN | 0.3339 | 649.4127 | 1.1442 | 0.0166 | 0.4531 |
+
+### Dataset: blobs
+| Algorithm | Silhouette Score | Calinski Harabasz Score | Davies Bouldin Score | Execution Time | Memory Usage |
+|---|---|---|---|---|---|
+| OriginScale | 0.6131 | 2776.0364 | 0.7354 | 0.0010 | 0.0000 |
+| K-Means (Random) | 0.7916 | 11066.9713 | 0.2923 | 0.0384 | -2.5312 |
+| K-Means++ | 0.7916 | 11066.9713 | 0.2923 | 0.0204 | 0.0625 |
+| Mini-Batch K-Means | 0.7916 | 11066.9713 | 0.2923 | 0.0865 | 0.0469 |
+| DBSCAN | 0.5732 | 7703.4547 | 0.4676 | 0.0097 | 0.2188 |
+| Agglomerative | 0.7916 | 11066.9713 | 0.2923 | 0.0110 | 0.9531 |
+| Affinity Propagation | 0.3257 | 7337.9921 | 1.1819 | 0.3909 | 60.2188 |
+| GMM | 0.7916 | 11066.9713 | 0.2923 | 0.0048 | 0.1719 |
+| Mean Shift | 0.7916 | 11066.9713 | 0.2923 | 0.0980 | 0.4688 |
+| OPTICS | 0.8441 | 10487.5937 | 0.2028 | 1.2937 | 0.1406 |
+| BIRCH | 0.7915 | 11057.7662 | 0.2924 | 0.0128 | 0.0000 |
+| Spectral Clustering | 0.7916 | 11066.9713 | 0.2923 | 0.0983 | 0.4688 |
+| K-Medoids | 0.7916 | 11066.9713 | 0.2923 | 0.1249 | 0.0000 |
+| HDBSCAN | 0.7924 | 11168.9828 | 0.2908 | 0.0074 | 0.0781 |
+
+### Dataset: circles
+| Algorithm | Silhouette Score | Calinski Harabasz Score | Davies Bouldin Score | Execution Time | Memory Usage |
+|---|---|---|---|---|---|
+| OriginScale | 0.2918 | 461.2342 | 1.3050 | 0.0022 | 0.0000 |
+| K-Means (Random) | 0.2935 | 466.5249 | 1.3008 | 0.1042 | 0.0000 |
+| K-Means++ | 0.2935 | 466.5249 | 1.3008 | 0.0478 | 0.0000 |
+| Mini-Batch K-Means | 0.2880 | 454.4604 | 1.3076 | 0.0978 | 0.0000 |
+| Agglomerative | 0.3318 | 320.0644 | 1.0808 | 0.0204 | -0.0469 |
+| Affinity Propagation | 0.3776 | 1332.7353 | 0.7796 | 0.4005 | 26.8594 |
+| GMM | 0.2947 | 462.3993 | 1.3029 | 0.0570 | 0.0000 |
+| OPTICS | 0.5958 | 483.0020 | 0.5768 | 1.2155 | -2.9219 |
+| BIRCH | 0.3158 | 272.0924 | 0.9579 | 0.0119 | 0.0000 |
+| Spectral Clustering | 0.1921 | 0.0050 | 391.9522 | 0.1215 | 0.0156 |
+| K-Medoids | 0.2928 | 461.8162 | 1.3053 | 0.0793 | 0.0625 |
+| HDBSCAN | 0.1945 | 0.0317 | 156.3586 | 0.0142 | 0.0000 |
+
+### Dataset: anisotropic
+| Algorithm | Silhouette Score | Calinski Harabasz Score | Davies Bouldin Score | Execution Time | Memory Usage |
+|---|---|---|---|---|---|
+| OriginScale | 0.8134 | 19727.4685 | 0.2661 | 0.0007 | 0.0000 |
+| K-Means (Random) | 0.8134 | 19727.4685 | 0.2661 | 0.0353 | 0.0000 |
+| K-Means++ | 0.8134 | 19727.4685 | 0.2661 | 0.0225 | 0.0000 |
+| Mini-Batch K-Means | 0.8134 | 19727.4685 | 0.2661 | 0.0819 | 0.0469 |
+| DBSCAN | 0.8177 | 20567.8617 | 0.2608 | 0.0143 | 0.1719 |
+| Agglomerative | 0.8134 | 19727.4685 | 0.2661 | 0.0069 | 1.6562 |
+| Affinity Propagation | 0.3113 | 12425.0746 | 1.0841 | 0.3292 | 18.7500 |
+| GMM | 0.8134 | 19727.4685 | 0.2661 | 0.0538 | 0.0312 |
+| Mean Shift | 0.8134 | 19727.4685 | 0.2661 | 0.1749 | -9.9531 |
+| OPTICS | 0.9030 | 11775.1493 | 0.1178 | 1.3440 | 0.2031 |
+| BIRCH | 0.8134 | 19727.4685 | 0.2661 | 0.0193 | 0.0000 |
+| Spectral Clustering | 0.8134 | 19727.4685 | 0.2661 | 0.1776 | 0.2188 |
+| K-Medoids | 0.8134 | 19727.4685 | 0.2661 | 0.0833 | 0.0000 |
+| HDBSCAN | 0.8134 | 19727.4685 | 0.2661 | 0.0106 | 0.0781 |
+
+### Dataset: iris
+| Algorithm | Silhouette Score | Calinski Harabasz Score | Davies Bouldin Score | Execution Time | Memory Usage |
+|---|---|---|---|---|---|
+| OriginScale | 0.4565 | 239.4845 | 0.8275 | 0.0005 | 0.0000 |
+| K-Means (Random) | 0.4594 | 241.8933 | 0.8340 | 0.0554 | 0.0000 |
+| K-Means++ | 0.4599 | 241.9044 | 0.8336 | 0.0756 | 0.0000 |
+| Mini-Batch K-Means | 0.4531 | 239.9329 | 0.8309 | 0.0865 | 0.0000 |
+| DBSCAN | 0.6559 | 343.9681 | 0.4942 | 0.0050 | 0.1406 |
+| Agglomerative | 0.4467 | 222.7192 | 0.8035 | 0.0005 | 0.0000 |
+| Affinity Propagation | 0.3416 | 171.3313 | 0.8829 | 0.0091 | 0.0000 |
+| GMM | 0.4751 | 141.2315 | 0.8867 | 0.0111 | 0.0000 |
+| Mean Shift | 0.4325 | 163.7138 | 0.8131 | 0.0384 | 0.0000 |
+| OPTICS | 0.5029 | 321.1272 | 0.7354 | 0.3531 | -1.2188 |
+| BIRCH | 0.4536 | 219.8188 | 0.8218 | 0.0013 | 0.0000 |
+| Spectral Clustering | 0.4593 | 229.6799 | 0.8224 | 0.0320 | 0.0000 |
+| K-Medoids | 0.4566 | 238.7630 | 0.8419 | 0.0020 | 0.0000 |
+| HDBSCAN | 0.5899 | 266.3504 | 0.5849 | 0.0016 | 0.0000 |
+
+### Dataset: wine
+| Algorithm | Silhouette Score | Calinski Harabasz Score | Davies Bouldin Score | Execution Time | Memory Usage |
+|---|---|---|---|---|---|
+| OriginScale | 0.2849 | 70.9400 | 1.3892 | 0.0003 | 0.0000 |
+| K-Means (Random) | 0.2849 | 70.9400 | 1.3892 | 0.0351 | 0.0000 |
+| K-Means++ | 0.2849 | 70.9400 | 1.3892 | 0.0077 | 0.0000 |
+| Mini-Batch K-Means | 0.2810 | 70.4206 | 1.3915 | 0.0342 | 0.0000 |
+| Agglomerative | 0.2774 | 67.6475 | 1.4186 | 0.0019 | 0.0000 |
+| Affinity Propagation | 0.1199 | 24.3066 | 1.6384 | 0.0173 | 0.1250 |
+| GMM | 0.2849 | 70.9400 | 1.3892 | 0.0016 | 0.0000 |
+| Mean Shift | 0.2207 | 18.9107 | 0.9828 | 0.0699 | 0.0312 |
+| BIRCH | 0.2774 | 67.6475 | 1.4186 | 0.0046 | -0.1719 |
+| Spectral Clustering | 0.2828 | 70.0411 | 1.3907 | 0.0392 | 0.0625 |
+| K-Medoids | 0.2676 | 67.1223 | 1.4248 | 0.0083 | 0.0000 |
+| HDBSCAN | 0.3603 | 60.8046 | 1.0559 | 0.0049 | 0.0156 |
+
+### Dataset: breast_cancer
+| Algorithm | Silhouette Score | Calinski Harabasz Score | Davies Bouldin Score | Execution Time | Memory Usage |
+|---|---|---|---|---|---|
+| OriginScale | 0.3434 | 267.6917 | 1.3205 | 0.0012 | 0.0000 |
+| K-Means (Random) | 0.3434 | 267.6917 | 1.3205 | 0.0439 | 0.0000 |
+| K-Means++ | 0.3434 | 267.6917 | 1.3205 | 0.0592 | 0.0000 |
+| Mini-Batch K-Means | 0.3475 | 267.4562 | 1.3068 | 0.1065 | 0.0000 |
+| Agglomerative | 0.3394 | 248.6288 | 1.3700 | 0.0083 | 0.0000 |
+| Affinity Propagation | 0.0820 | 39.0568 | 1.3647 | 0.1570 | 9.1875 |
+| GMM | 0.3145 | 247.2835 | 1.3770 | 0.0272 | 0.4688 |
+| BIRCH | 0.3394 | 248.6288 | 1.3700 | 0.0149 | 2.6250 |
+| Spectral Clustering | 0.3367 | 259.6634 | 1.3161 | 0.0468 | 1.4062 |
+| K-Medoids | 0.3491 | 264.6118 | 1.3244 | 0.0204 | 0.1250 |
+| HDBSCAN | 0.3921 | 39.6252 | 0.7804 | 0.0143 | 0.0000 |
+
+## OriginScale Performance
+- **Success Rate**: 7/7 (100.00% if originscale_analysis['total_runs'] > 0 else 0)
+
+## Files Generated
+- Raw results: `detailed_results/`
+- Visualizations: `visualizations/`
+- Statistical analysis: `statistical_analysis/`
+- Dataset information: `datasets/`
