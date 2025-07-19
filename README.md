@@ -77,8 +77,8 @@ labels = model.labels_
 
 ## References
 
-- [Project Repository](https://github.com/yourusername/originscale-github)
-- For questions, contact: your.email@example.com
+- [Project Repository]([https://github.com/yourusername/originscale-github](https://github.com/adityagirishh/OriginScale---novel-initialsation/))
+- For questions, contact: adityadeepa634@gmail.com
 
 ---
 
