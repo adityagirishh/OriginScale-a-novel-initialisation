@@ -28,19 +28,45 @@
 ## Pseudocode
 
 ```python
-def originscale(X, k, max_iter=300):
-    # Step 1: Initialization
-    centroids = select_k_closest_to_origin(X, k)
-    for i in range(max_iter):
-        # Step 2: Assignment
-        labels = assign_points_to_centroids(X, centroids)
-        # Step 3: Update
-        new_centroids = compute_means(X, labels, k)
-        # Step 4: Convergence check
-        if np.allclose(centroids, new_centroids):
-            break
-        centroids = new_centroids
-    return labels, centroids
+class OriginScale:
+    def __init__(self, n_clusters=3, tol=1e-4, max_iter=300):
+        self.n_clusters = n_clusters
+        self.tol = tol
+        self.max_iter = max_iter
+        self.centroids = None
+        self.labels_ = None 
+
+    def _euclidean_distance(self, X, centroids):
+        return np.linalg.norm(X[:, np.newaxis] - centroids, axis=2)
+
+    def _average_distance_initialization(self, X):
+        distances = np.linalg.norm(X, axis=1)
+        sorted_indices = np.argsort(distances)
+        return X[sorted_indices[:self.n_clusters]]
+
+    def _assign_labels(self, X):
+        distances = self._euclidean_distance(X, self.centroids)
+        return np.argmin(distances, axis=1)
+
+    def _update_centroids(self, X, labels):
+        centroids = []
+        for i in range(self.n_clusters):
+            cluster_points = X[labels == i]
+            centroids.append(
+                np.mean(cluster_points, axis=0) if len(cluster_points) > 0 else X[np.random.randint(X.shape[0])])
+        return np.array(centroids)
+
+    def fit(self, X):
+        self.centroids = self._average_distance_initialization(X)
+        prev_centroids = np.zeros_like(self.centroids)
+        for _ in range(self.max_iter):
+            labels = self._assign_labels(X)
+            self.centroids = self._update_centroids(X, labels)
+            if np.linalg.norm(self.centroids - prev_centroids) < self.tol:
+                break
+            prev_centroids = np.copy(self.centroids)
+        self.labels_ = labels
+        return self
 ```
 
 ---
