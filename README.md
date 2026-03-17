@@ -1,5 +1,5 @@
 # OriginScale
-
+(An attempt to make the fastest geometrically initialisable clustering algorithm) 
 A deterministic, parameter-free centroid initializer for K-means clustering.
 
 OriginScale selects initial centroids by sorting all points by their L2 distance from the coordinate origin and taking the `k` closest points. One sort. No randomness. No hyperparameters.
